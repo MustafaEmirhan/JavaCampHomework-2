@@ -1,0 +1,33 @@
+package oopIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Course course1 = new Course("-Yazýlým Geliþtirici Yetiþtirici Kampý(C#,ANGULAR)", "Engin Demiroð", 10, 21);// referans
+																													// oluþturma
+		Course course2 = new Course("-Yazýlým Geliþtirici Yetiþtirici Kampý(JAVA,React)", "Engin Demiroð", 50, 16);// referans																											// oluþturma
+
+		Course course3 = new Course("-Programlamaya Giriþ Ýçin Temel Kurs", "Engin Demiroð", 90, 6);// referans oluþturma
+
+		Course[] courses = { course1, course2, course3 };
+		
+		System.out.println("Kurslarýmýz:");
+
+		for (Course course : courses) {
+
+			System.out.println(course.name);
+
+		}
+
+		CourseManager courseManager = new CourseManager();
+
+		courseManager.register(course1);
+
+		courseManager.register(course2);
+
+		courseManager.register(course3);
+
+	}
+
+}
